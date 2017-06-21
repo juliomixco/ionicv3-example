@@ -33,6 +33,8 @@ import { StatusBar } from '@ionic-native/status-bar';
 
 import { TranslateModule, TranslateLoader } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { Swapi } from "../providers/swapi";
+import { People } from "../providers/providers";
 
 // The translate loader needs to know where to load i18n files
 // in Ionic's static asset pipeline.
@@ -105,8 +107,10 @@ export function provideSettings(storage: Storage) {
     WelcomePage
   ],
   providers: [
+    Swapi,
     Api,
     Items,
+    People,
     User,
     Camera,
     GoogleMaps,

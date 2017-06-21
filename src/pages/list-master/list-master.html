@@ -1,6 +1,9 @@
 <ion-header>
 
   <ion-navbar>
+    <button ion-button menuToggle icon-only>
+      <ion-icon name='menu'></ion-icon>
+    </button>
     <ion-title>{{ 'LIST_MASTER_TITLE' | translate }}</ion-title>
 
     <ion-buttons end>
@@ -15,10 +18,10 @@
 <ion-content>
 
   <ion-list>
-    <ion-item-sliding *ngFor="let item of currentItems">
+    <ion-item-sliding *ngFor="let item of currentPeople">
       <button ion-item (click)="openItem(item)">
         <ion-avatar item-start>
-          <img [src]="item.profilePic" />
+          <img [src]="item.image" />
         </ion-avatar>
         <h2>{{item.name}}</h2>
         <p>{{item.about}}</p>
@@ -32,4 +35,7 @@
       </ion-item-options>
     </ion-item-sliding>
   </ion-list>
+  <ion-infinite-scroll (ionInfinite)="doInfinite($event)">
+    <ion-infinite-scroll-content></ion-infinite-scroll-content>
+  </ion-infinite-scroll>
 </ion-content>

@@ -26,6 +26,9 @@ import { TranslateService } from '@ngx-translate/core'
   template: `<ion-menu [content]="content">
     <ion-header>
       <ion-toolbar>
+        <button ion-button menuToggle icon-only>
+          <ion-icon name='menu'></ion-icon>
+        </button>
         <ion-title>Pages</ion-title>
       </ion-toolbar>
     </ion-header>
@@ -42,7 +45,7 @@ import { TranslateService } from '@ngx-translate/core'
   <ion-nav #content [root]="rootPage"></ion-nav>`
 })
 export class MyApp {
-  rootPage = FirstRunPage;
+  rootPage = ListMasterPage;//FirstRunPage;
 
   @ViewChild(Nav) nav: Nav;
 

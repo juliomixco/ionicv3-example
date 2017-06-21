@@ -8,11 +8,18 @@
 
 
 <ion-content>
-  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.profilePic + ')'">
+  <div class="item-profile" text-center #profilePic [style.background-image]="'url(' + item.image + ')'">
   </div>
 
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
-    <p>{{item.about}}</p>
+    <ion-item>Gender: <span item-end>{{item.gender}}</span></ion-item>
+    <ion-item>Eyes: <span item-end>{{item.eye_color}}</span></ion-item>
+    <ion-item>Hair: <span item-end>{{item.hair_color}}</span></ion-item>
+    <ion-item>Height: <span item-end>{{item.height}}</span></ion-item>
+    <ion-item>
+      Films:
+      <ion-badge item-end>{{item.films.length}}</ion-badge>
+    </ion-item>
   </div>
 </ion-content>
