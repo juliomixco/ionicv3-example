@@ -1,3 +1,5 @@
+<details>
+<summary>Ionic Super Starter Info</summary>
 # The Ionic Super Starter 🎮
 
 _Note: the Ionic Super Starter requires Ionic CLI 3._
@@ -64,3 +66,4 @@ To add new languages, add new files to the `src/assets/i18n` directory, followin
 ### Changing the Language
 
 To change the language of the app, edit `src/app/app.component.ts` and modify `translate.use('en')` to use the LANGCODE from `src/assets/i18n/`
+</details>
