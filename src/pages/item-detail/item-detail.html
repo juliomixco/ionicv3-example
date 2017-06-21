@@ -13,13 +13,24 @@
 
   <div class="item-detail" padding>
     <h2>{{item.name}}</h2>
-    <ion-item>Gender: <span item-end>{{item.gender}}</span></ion-item>
-    <ion-item>Eyes: <span item-end>{{item.eye_color}}</span></ion-item>
-    <ion-item>Hair: <span item-end>{{item.hair_color}}</span></ion-item>
-    <ion-item>Height: <span item-end>{{item.height}}</span></ion-item>
-    <ion-item>
-      Films:
-      <ion-badge item-end>{{item.films.length}}</ion-badge>
-    </ion-item>
+    <ion-list>
+      <ion-list-header>
+        Info
+      </ion-list-header>
+      <ion-item>Gender: <span item-end>{{item.gender}}</span></ion-item>
+      <ion-item>Eyes: <span item-end>{{item.eye_color}}</span></ion-item>
+      <ion-item>Hair: <span item-end>{{item.hair_color}}</span></ion-item>
+      <ion-item>Height: <span item-end>{{item.height}}</span></ion-item>
+    </ion-list>
+    <ion-list>
+      <ion-list-header>
+        Films:
+        <ion-badge item-end>{{item.films.length}}</ion-badge>
+      </ion-list-header>
+      <ion-item *ngFor="let film of item.filmInfo">
+        {{film.title}}
+      </ion-item>
+    </ion-list>
+
   </div>
 </ion-content>
